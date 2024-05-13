@@ -1,16 +1,26 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../Components/Hooks/useAuth";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MdOutlineSportsScore } from "react-icons/md";
 import { BsCalendarDate } from "react-icons/bs";
+import Comment from "../../Components/Comment/Comment";
+import { useEffect, useState } from "react";
+import CommentCard from "../../Components/CommentCard/CommentCard";
 const Details = () => {
     const {user} = useAuth();
     const navigate = useNavigate();
+    const {id} = useParams();
     console.log(user)
     const {_id,title,mark,level,date,photo,des,addedby} = useLoaderData();
     document.title = title;
+    const [comments,setComments] = useState([]);
+    useEffect(()=>{
+        axios.get(`https://learnx-omega.vercel.app/comment/${id}`)
+        .then(res => setComments(res.data))
+    },[])
+    console.log(comments)
     const handleSubmit = (event)=>{
         event.preventDefault();
         const form = event.target;
@@ -48,6 +58,7 @@ const Details = () => {
         console.log(user?.email,addedby)
 
     }
+
     return (
         <div className="container mx-auto px-3 mt-16">
             <div className="flex gap-10 flex-col lg:flex-row justify-between items-center">
@@ -110,6 +121,16 @@ const Details = () => {
     </div>
   </div>
 </dialog>
+
+<div className="mt-20">
+    <div className="my-10">
+        <h1 className="text-3xl font-semibold text-[#FAB519] border-l-4 border-[#FAB519] pl-4">Discussion</h1>
+    </div>
+    <div className="flex flex-col gap-6">
+        {comments.map((item,i)=><CommentCard key={i} item={item}></CommentCard>)}
+    </div>
+    <Comment id={id} comments={comments} setComments={setComments} ></Comment>
+</div>
 
         </div>
     );
