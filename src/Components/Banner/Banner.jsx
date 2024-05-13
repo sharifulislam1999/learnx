@@ -38,7 +38,7 @@ const Banner = () => {
                         <Link className="px-6 py-2 rounded-lg text-lg font-semibold border border-[#FAB519] duration-200 hover:bg-transparent hover:text-white  bg-[#FAB519]" to='/assignments'>All Assingment</Link>
                         </div> 
                 </div>
-                <div className="flex-1">sdf</div>
+                <div className="flex-1"></div>
             </div>
 
            </div>

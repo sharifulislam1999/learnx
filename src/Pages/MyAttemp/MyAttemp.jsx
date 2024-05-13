@@ -7,6 +7,7 @@ const MyAttemp = () => {
   document.title = "My Attempt"
     const {user} = useAuth();
     const [attemp,setAttemp] = useState([]);
+    const [loader,setLoader] = useState(true);
     const email = user.email || user?.reloadUserInfo?.providerUserInfo[0]?.screenName+'@github.com';
     const url = `https://learnx-omega.vercel.app/myattemp?email=${email}`;
     console.log(url)  
@@ -14,6 +15,8 @@ const MyAttemp = () => {
         axios.get(url,{withCredentials:true})
         .then(res => {
             setAttemp(res.data)
+            setLoader(false)
+            
         })
 
     },[url])
@@ -35,12 +38,16 @@ const MyAttemp = () => {
       </tr>
     </thead>
     <tbody>
+      
         {attemp.map((item,i)=> <AttempRow key={i} item={item}></AttempRow> )}
      
     
 
     </tbody>
   </table>
+    {loader && <div className="flex mt-10 justify-center">
+    <span className="loading loading-spinner text-warning"></span>
+      </div>}
 </div>
         </div>
     );
