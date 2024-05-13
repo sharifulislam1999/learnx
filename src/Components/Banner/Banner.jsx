@@ -10,7 +10,7 @@ const Banner = () => {
            <div className="container mx-auto px-3">
             <div className="flex gap-2 flex-col lg:flex-row justify-between">
                 <div className="flex-1">
-                    <div>
+                    <div className="mb-2 md:mb-6">
                     <h1 className="text-3xl md:text-5xl leading-snug font-bold text-white">Unlock Knowledge in <br/><span className="text-[#FAB519]">learn.<span className="text-white">X</span></span></h1>
                     </div>
                     <div className="text-[#d3d1d1e3] text-sm leading-6 font-medium">
