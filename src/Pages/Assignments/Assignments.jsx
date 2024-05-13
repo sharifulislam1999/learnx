@@ -11,9 +11,10 @@ const Assignments = () => {
     document.title = "All Assignments"
     const {user} = useAuth();
     const assignments = useLoaderData();
-    const [filter,setFilter] = useState(assignments);
+    const [allAssignment,setAllassignment] = useState(assignments)
+    const [filter,setFilter] = useState(allAssignment);
     const [fitervalue,setFilterValue] = useState(null); 
-    const [loader,setLoader] = useState(true)
+    const [loader,setLoader] = useState(false)
     useEffect(()=>{
         axios.get(`https://learnx-omega.vercel.app/filter/${fitervalue}`,{withCredentials:true})
         .then(res => {
@@ -24,7 +25,6 @@ const Assignments = () => {
             }
            }
         })
-        setLoader(false)
     },[fitervalue])
     const options = [
         { value: 'all', label: 'All' },
@@ -33,11 +33,15 @@ const Assignments = () => {
         { value: 'hard', label: 'Hard' }
       ]
       const handleFilter = (event)=>{
+        setLoader(true)
         const target = event.value;
         if(target === "all"){
-            setLoader(true)
-            setFilter(assignments)
+            setLoader(false)
+            setFilter(allAssignment)
+            // setAllassignment()
+            return
         }
+        
         setFilterValue(target);
       }
       const deleteItem = (id,addedby)=>{
@@ -61,7 +65,9 @@ const Assignments = () => {
                     .then(res => {
                         if(res.data.deletedCount === 1){
                         const remaining = filter.filter((item)=> item._id !== id);
-                        setFilter(remaining)                             
+                        const remainingmain = assignments.filter((item)=> item._id !== id)
+                        setFilter(remaining)            
+                        setAllassignment(remainingmain)                 
                           Swal.fire({
                             title: "Deleted!",
                             text: "Your file has been deleted.",
@@ -84,12 +90,16 @@ const Assignments = () => {
     }
     return (
         <div className="container mx-auto px-3 mt-16">
-            <div className="inline-block my-10">
-                <h1 className="text-lg font-semibold mb-3">Filter By</h1>
+            <h1 className="text-lg font-semibold mb-3">Filter By</h1>
+            <div className="flex items-center mb-10 ">
+                
+                <div>
             <Select onChange={handleFilter} options={options} />
+                </div>
+            {loader && <span className="ml-2 loading loading-spinner text-warning"></span>}  
             </div>
             
-                {loader && <span className="loading loading-spinner text-warning"></span>}  
+                
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">  
                 {filter.map((item,i)=><AssignmentCard key={i} deleteItem={deleteItem} item={item}></AssignmentCard>)}        
             </div>     

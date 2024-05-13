@@ -24,7 +24,7 @@ const CreateAssignment = () => {
         const photo = data.photo;
         const des = data.description;
         const updatedAssignment = {title,mark,level,date,photo,des}
-        axios.put(`http://localhost:5000/update/${_id}`,updatedAssignment)
+        axios.put(`https://learnx-omega.vercel.app/update/${_id}`,updatedAssignment)
         .then(res => {
             if(res.data.modifiedCount === 0){
                 errorMessage("No Changes")
