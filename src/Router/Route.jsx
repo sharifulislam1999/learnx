@@ -20,6 +20,7 @@ const route = createBrowserRouter([
         children:[
             {
                 path: "/",
+                loader: ()=>fetch('https://learnx-omega.vercel.app/assignment'),
                 element: <Home></Home>
             },
             {
