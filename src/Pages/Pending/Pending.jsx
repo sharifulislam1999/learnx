@@ -17,9 +17,9 @@ const Pending = () => {
     <thead>
       <tr>        
         <th>Title</th>
-        <th>Marks</th>
+        <th>Total Marks</th>
         <th>Examinee Name</th>
-        <th>Active</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>

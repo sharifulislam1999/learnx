@@ -29,8 +29,8 @@ const MyAttemp = () => {
       <tr>
         <th>Title</th>
         <th>Status</th>
-        <th>Mark</th>
-        <th>Archive Mark</th>
+        <th>Total Mark</th>
+        <th>Marks obtained</th>
         <th>Feedback</th>
       </tr>
     </thead>

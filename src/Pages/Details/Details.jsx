@@ -3,6 +3,8 @@ import useAuth from "../../Components/Hooks/useAuth";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MdOutlineSportsScore } from "react-icons/md";
+import { BsCalendarDate } from "react-icons/bs";
 const Details = () => {
     const {user} = useAuth();
     const navigate = useNavigate();
@@ -58,11 +60,13 @@ const Details = () => {
                     <div className="text-3xl font-semibold">
                         <h1>{title}</h1>
                     </div>                  
-                        <div className="text-lg font-medium">
+                        <div className="text-base font-medium flex gap-2 items-center">
+                            <MdOutlineSportsScore className="text-[#FAB519] text-2xl"></MdOutlineSportsScore>
                             <h1>Total Marks: {mark}</h1>
                         </div>
-                        <div className="text-lg font-medium">
-                            <h1>Date: {date}</h1>
+                        <div className="text-base font-medium flex gap-4 items-center">
+                            <BsCalendarDate className="text-[#FAB519]"></BsCalendarDate>
+                            <h1>Last Date: {date}</h1>
                         </div>
                         <div className="flex gap-3 items-center"><h1 className="text-lg font-medium">Diffeculty Level:</h1>
                         {level === "easy" && <h1 className='bg-blue-600 capitalize inline-block font-medium text-white px-5 py-1 rounded-md'>{level}</h1>}

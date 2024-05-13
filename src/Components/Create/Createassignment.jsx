@@ -106,7 +106,7 @@ const CreateAssignment = () => {
                         </div>
                         <div className="flex-1">                            
                             <div className="mb-1 font-medium">
-                                <h1>Date</h1>
+                                <h1>Last Date</h1>
                             </div>
                             <div className="border rounded-md">                        
                             <><DatePicker {...register("date")} dateFormat="dd/MM/yyyy" showIcon className="w-full h-10 px-3 rounded-md text- focus:outline-none"  selected={selectedDate} onChange={date=>setselectedDate(date)} minDate={new Date()} required></DatePicker></>                             
