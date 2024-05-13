@@ -11,7 +11,7 @@ const Banner = () => {
             <div className="flex gap-2 flex-col lg:flex-row justify-between">
                 <div className="flex-1">
                     <div className="mb-2 md:mb-6">
-                    <h1 className="text-3xl md:text-5xl leading-snug font-bold text-white">Unlock Knowledge in <br/><span className="text-[#FAB519]">learn.<span className="text-white">X</span></span></h1>
+                    <h1 className="text-3xl md:text-6xl leading-snug font-bold text-white">Unlock Knowledge in <br/><span className="text-[#FAB519]">learn.<span className="text-white">X</span></span></h1>
                     </div>
                     <div className="text-[#d3d1d1e3] text-sm leading-6 font-medium">
                         <p>Join forces with fellow learners on our interactive group study platform. Enhance your understanding, share insights, and conquer challenges together. Experience the power of collective knowledge as you collaborate, discuss, and achieve academic excellence. Start studying smarter, not harder, with our group study website today!</p>

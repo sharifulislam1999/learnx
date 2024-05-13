@@ -35,7 +35,7 @@ const Nav = () => {
     <div className="py-1 md:py-3 bg-[#222222] text-[#c6c6c6] z-50">
             <div className="container mx-auto px-3">
             <div className="flex z-20 flex-col md:flex-row gap-2 md:gap-0 justify-between">
-              <div className="flex gap-2 md:gap-3 text-center flex-wrap text-[14px]">
+              <div className="hidden md:flex gap-2 md:gap-3 text-center flex-wrap text-[14px]">
                 <div className="flex gap-2 md:gap-3 items-center">
                   <div>
                     <MdCall></MdCall>                   
@@ -62,7 +62,7 @@ const Nav = () => {
                 </div>
                 
               </div>
-             {loader ? <span className="loading loading-spinner text-warning"></span>
+             {loader ? <div className="flex justify-end"> <span className="loading loading-spinner text-warning"></span></div>
 : user ?  <div className="relative justify-end flex gap-2 items-center">
               <div className="text-sm">
                 <h1>{user?.displayName}</h1>
@@ -81,14 +81,15 @@ const Nav = () => {
                   <button className="py-1 px-3 text-sm rounded-md bg-[#FAB519] text-black font-medium" onClick={handleLogOut}>LogOut</button>
                 </div>
               </div>
-             </div> : <div className="flex gap-3 items-center text-[14px]">
+             </div> :<div className="flex justify-end">
+             <div className="flex gap-3 items-center text-[14px]">
                 <div>
                   <FaUser></FaUser>
                 </div>
                 <div className="">
                  <Link to='/register'>Register</Link>
                 </div>
-                <div className="bg-white p-[1px] h-full">
+                <div className="bg-[#FAB519] p-[1px] h-full">
 
                 </div>
                 <div>
@@ -97,7 +98,7 @@ const Nav = () => {
                 <div className="cursor-pointer" onClick={handleTheme}>
                   {theme ? <CiLight></CiLight>: <MdDarkMode></MdDarkMode> }
                 </div>
-              </div>}
+              </div></div>}
                  
             </div>
             </div>

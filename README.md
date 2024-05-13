@@ -1,8 +1,15 @@
-# React + Vite
+# Learn.X
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Learn.X Website! Please Visit my live site [here](https://b9a11-9673c.web.app/).
 
-Currently, two official plugins are available:
+## Category
+assignment_category_0001
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **User-friendly Interface**: Our website boasts an intuitive and easy-to-navigate interface, ensuring a seamless user experience for all visitors.
+- **Responsive Design**: Whether you're accessing our site from a desktop, tablet, or mobile device, our responsive design ensures optimal viewing on any screen size.
+- **Rich Content**: Dive into a wealth of engaging content, from informative articles to captivating multimedia experiences.
+- **Curd**: Curd Oparation Feature.
+- **Authentication**: Authentication via Firebase has been added to this website.
+

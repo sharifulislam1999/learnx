@@ -1,6 +1,6 @@
 import googleImg from "../../assets/Images/google.png"
 import githubImg from "../../assets/Images/github.png"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoEyeOutline } from "react-icons/io5";
 import { useRef, useState } from "react";
 import { IoEyeOffOutline } from "react-icons/io5";
@@ -15,6 +15,7 @@ import { GoogleAuthProvider,GithubAuthProvider } from "firebase/auth";
 
 const RegisterForm = () => {
     const {createUser,setUser} = useAuth();
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -36,6 +37,9 @@ const RegisterForm = () => {
             .then(()=>{
                 setUser({photoURL:photo})
                 successMessage("Registation Success")
+                setTimeout(()=>{
+                  navigate("/")
+                },1000)
                 console.log(res.user)
             })
         })
@@ -68,13 +72,19 @@ const RegisterForm = () => {
             .then((res)=>{
                 if(res.user){
                     successMessage("Registation Success")
+                    setTimeout(()=>{
+                      navigate("/")
+                    },1000)
                 }
             })    
         }else if(provider === 'github'){
             signInWithPopup(auth,new GithubAuthProvider())
             .then((res)=>{
               if(res.user){              
-                successMessage("Registation Success")               
+                successMessage("Registation Success")       
+                setTimeout(()=>{
+                  navigate("/")
+                },1000)        
               }
                           
             })    
@@ -99,7 +109,7 @@ const RegisterForm = () => {
             <div className="text-center text-4xl font-bold mb-10">
                 <h1>Register</h1>
             </div>
-            <div className="flex gap-5">
+            <div className="flex flex-col lg:flex-row gap-5">
               <div className="flex-1 space-y-1">
                 
                 <div>
@@ -117,7 +127,7 @@ const RegisterForm = () => {
                   {errors?.name?.message ? <span className="text-sm text-red-600">{errors.name.message}</span>: <span className="opacity-0">.</span>}
                 </div>
                 <div>
-                  <h1 className="mb-2">Photo Url</h1>
+                  <h1 className="mb-0 lg:mb-2">Photo Url</h1>
                   <input {...register("photo",{
                     required:{
                         value:true,
