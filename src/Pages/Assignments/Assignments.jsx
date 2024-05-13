@@ -56,7 +56,7 @@ const Assignments = () => {
                 confirmButtonText: "Yes, delete it!"
               }).then((result) => {
                 if (result.isConfirmed) {
-                    axios.delete(`http://localhost:5000/assignment/${id}`)
+                    axios.delete(`https://learnx-omega.vercel.app/assignment/${id}`)
                     .then(res => {
                         if(res.data.deletedCount === 1){
                         const remaining = filter.filter((item)=> item._id !== id);

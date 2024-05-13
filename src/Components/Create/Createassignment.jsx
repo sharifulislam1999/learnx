@@ -26,7 +26,7 @@ const CreateAssignment = () => {
         const filterEmail = makeGithubEmail + "@github.com";
         const addedby = user?.email || filterEmail;
         const assignment = {title,mark,level,date,photo,des,addedby}
-        axios.post('http://localhost:5000/assignment',assignment)
+        axios.post('https://learnx-omega.vercel.app/assignment',assignment)
         .then(res => {
             if(res.data.insertedId){
                 successMessage("Added Success")
