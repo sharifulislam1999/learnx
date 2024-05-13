@@ -85,16 +85,12 @@ const RegisterForm = () => {
     <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
       <div className="w-full lg:w-1/3 space-y-1">
         <div className="text-2xl text-center md:text-left md:text-5xl leading-snug font-bold">
-          <h1>
+          <h1 className="leading-snug mb-3">
             Create An New <br></br> Account
           </h1>
         </div>
-        <div className="text-[#888282]">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
-            optio alias blanditiis at corrupti perferendis magni ea adipisci
-            recusandae iure.
-          </p>
+        <div className="text-[#888282] text-sm">
+          <p>Start your collaborative learning journey! Enter your details to access shared resources and connect with study groups. Join us now and shape your academic success!</p>
         </div>
       </div>
       <div className="w-full lg:w-2/3 px-5 py-10 border rounded-lg">

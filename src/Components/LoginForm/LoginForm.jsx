@@ -80,16 +80,12 @@ const popupLogin = (provider)=>{
     <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
       <div className="w-full lg:w-1/3 space-y-1">
         <div className="text-2xl text-center md:text-left md:text-5xl leading-snug font-bold">
-          <h1>
+          <h1 className="leading-snug mb-3">
            Already Have An<br></br> Account
           </h1>
         </div>
-        <div className="text-[#888282]">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
-            optio alias blanditiis at corrupti perferendis magni ea adipisci
-            recusandae iure.
-          </p>
+        <div className="text-[#888282] text-sm">
+          <p>Enter your credentials to join our collaborative learning community. Access study resources, connect with peers, and streamline your academic experience. Unlock a world of shared knowledge with just a few clicks.</p>
         </div>
       </div>
       <div className="w-full lg:w-2/3 px-5 py-10 border rounded-lg">
