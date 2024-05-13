@@ -57,7 +57,7 @@ const popupLogin = (provider)=>{
       signInWithPopup(auth,new GoogleAuthProvider())
       .then((res)=>{
           if(res.user){
-              successMessage("Registation Success")
+              successMessage("Login Success")
               setTimeout(()=>{
                 navigate(location.state ? location.state : "/")
             },1000)
@@ -67,7 +67,7 @@ const popupLogin = (provider)=>{
       signInWithPopup(auth,new GithubAuthProvider())
       .then((res)=>{
           if(res.user){
-              successMessage("Registation Success")
+              successMessage("Login Success")
               setTimeout(()=>{
                 navigate(location.state ? location.state : "/")
             },1000)

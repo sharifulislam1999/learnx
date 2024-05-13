@@ -68,7 +68,7 @@ const Details = () => {
                             <h1>{des}</h1>
                         </div>
                         <div>
-                            <button onClick={taken} className="px-4 py-2 hover:bg-transparent hover:text-black duration-150 bg-blue-500 border border-blue-500 text-white rounded-lg text-lg font-medium">Take Assignment</button>
+                            <button onClick={taken} className="px-4 py-1 hover:bg-transparent hover:text-black duration-150 bg-[#FAB519] border-2 border-[#FAB519] text-black rounded-lg text-base font-medium">Take Assignment</button>
                         </div>
                     
                 </div>
@@ -77,7 +77,7 @@ const Details = () => {
   <div className="modal-box w-11/12 max-w-5xl">
     <h3 className="font-bold text-lg text-center">{title}</h3>
     <form onSubmit={handleSubmit} autoComplete="off">
-    <p className="py-4 text-center">Please Recheck Our Submission</p>
+    <p className="py-4 text-center">Please Check Your Input Field Before Submit.</p>
     <div className="space-y-4">
         <div>
             <h1 className="mb-1 font-medium">PDF Link</h1>

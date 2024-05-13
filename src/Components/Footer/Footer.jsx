@@ -40,10 +40,9 @@ const Footer = () => {
               <div className="text-[#c6c6c6]">
                 <ul className="space-y-2">
                   <li>Upcomming Event</li>
-                  <li>Upcomming Products</li>
-                  <li>New Product</li>
-                  <li>Product News</li>
-                  <li>Product Stock</li>
+                  <li>Upcomming Assignment</li>
+                  <li>New Assignment</li>
+                  <li>All Assignment</li>                 
                 </ul>
               </div>
             </div>
@@ -55,8 +54,7 @@ const Footer = () => {
                 <ul className="space-y-2">
                   <li>Terms of Use</li>
                   <li>Privacy Police</li>
-                  <li>Contact Support</li>
-                  <li>Careers</li>
+                  <li>Contact Support</li>                  
                   <li>FAQs</li>
                 </ul>
               </div>
