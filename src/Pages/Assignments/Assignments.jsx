@@ -8,6 +8,7 @@ import useAuth from "../../Components/Hooks/useAuth";
 import { ToastContainer, toast } from 'react-toastify';
 
 const Assignments = () => {
+    document.title = "All Assignments"
     const {user} = useAuth();
     const assignments = useLoaderData();
     const [filter,setFilter] = useState(assignments);

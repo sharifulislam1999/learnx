@@ -10,6 +10,7 @@ const Preview = () => {
     const navigate = useNavigate()
     const {user} = useAuth();
     const {_id,title,mark,examineeName,link,note} = useLoaderData();
+    document.title = "Preview"+title;
     const handleSubmit = (event)=>{
         event.preventDefault();
         const form = event.target;

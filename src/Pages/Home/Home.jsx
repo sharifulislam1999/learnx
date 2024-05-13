@@ -5,6 +5,7 @@ import Title from '../../Components/Title/Title';
 import Accordian from '../../Components/Accordian/Accordian';
 const Home = () => {
     const assignment = useLoaderData()
+    document.title = "Learn.X | Home";
     return (
        <>
         <Banner></Banner>

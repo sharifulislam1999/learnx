@@ -3,6 +3,7 @@ import TableRow from "../../Components/TableRow/TableRow";
 
 const Pending = () => {
     const pendingAssignment = useLoaderData();
+    document.title = "Pending Assignments"
 
     return (
         <div className="container mx-auto px-3 mt-16">

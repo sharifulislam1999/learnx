@@ -75,7 +75,7 @@ const Nav = () => {
                 </div>
               <div className={`absolute  ${profile ? "block" : "hidden"} space-y-3 w-40 right-0 top-9 p-2 rounded-lg bg-[#222222] border-2 border-[#FAB519] z-[1000]`}>
                 <div>
-                  <Link onClick={()=>setProfile(!profile)} to="/attempte" className="text-center block">My Attempted</Link>
+                  <Link onClick={()=>setProfile(!profile)} to="/attempte" className="text-center block">My Attempt</Link>
                 </div>
                 <div className="flex justify-center">
                   <button className="py-1 px-3 text-sm rounded-md bg-[#FAB519] text-black font-medium" onClick={handleLogOut}>LogOut</button>

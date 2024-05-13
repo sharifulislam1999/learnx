@@ -7,6 +7,7 @@ const Details = () => {
     const {user} = useAuth();
     console.log(user)
     const {_id,title,mark,level,date,photo,des,addedby} = useLoaderData();
+    document.title = title;
     const handleSubmit = (event)=>{
         event.preventDefault();
         const form = event.target;

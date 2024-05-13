@@ -4,6 +4,7 @@ import useAuth from "../../Components/Hooks/useAuth";
 import AttempRow from "./AttempRow";
 
 const MyAttemp = () => {
+  document.title = "My Attempt"
     const {user} = useAuth();
     const [attemp,setAttemp] = useState([]);
     const email = user.email || user?.reloadUserInfo?.providerUserInfo[0]?.screenName+'@github.com';
