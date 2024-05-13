@@ -39,7 +39,6 @@ const Assignments = () => {
             setLoader(false)
             setFilter(allAssignment)
             // setAllassignment()
-            return
         }
         
         setFilterValue(target);
