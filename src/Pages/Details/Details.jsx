@@ -1,10 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuth from "../../Components/Hooks/useAuth";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Details = () => {
     const {user} = useAuth();
+    const navigate = useNavigate();
     console.log(user)
     const {_id,title,mark,level,date,photo,des,addedby} = useLoaderData();
     document.title = title;
@@ -20,12 +21,16 @@ const Details = () => {
         .then(res => {
             if(res.data.insertedId){
                 successMessage("Submitted Success Please Wait For Result")
+                setTimeout(()=>{
+                    navigate('/attempte');
+                },1000)              
             }else{
                 errorMessage("Something Wrong")
             }
         })
 
     }
+    
     const errorMessage = (msg)=>{
         toast.error(msg)
     }
@@ -93,6 +98,7 @@ const Details = () => {
     </div>
     </form>
     <div className="modal-action">
+    <ToastContainer position="top-center"></ToastContainer>
       <form method="dialog">        
         {/* if there is a button, it will close the modal */}
         <button className="btn">Close</button>
@@ -100,7 +106,7 @@ const Details = () => {
     </div>
   </div>
 </dialog>
-<ToastContainer position="top-center"></ToastContainer>
+
         </div>
     );
 };
