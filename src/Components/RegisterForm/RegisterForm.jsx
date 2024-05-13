@@ -97,7 +97,7 @@ const RegisterForm = () => {
           </p>
         </div>
       </div>
-      <div className="w-full md:w-2/3 px-5 py-10 border rounded-lg">
+      <div className="w-full lg:w-2/3 px-5 py-10 border rounded-lg">
         <div>
           <form ref={formRef} onSubmit={handleSubmit(handleRegister)}>
             <div className="text-center text-4xl font-bold mb-10">
