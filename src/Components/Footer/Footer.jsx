@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
               <div className="text-[#c6c6c6] font-normal">
                 <p>
-                Discover artisanal excellence at [Website Name], your destination for handcrafted treasures. Explore unique creations crafted with passion and skill, and find inspiration for your next artistic endeavor.
+                Unlock collaborative learning potential effortlessly with our footer. Quick links to study tools, group sessions, and support ensure a smooth academic journey. Optimize your study experience with our intuitive interface.
                 </p>
               </div>
               <div className="flex gap-4 text-[#fff] text-xl">
