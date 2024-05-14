@@ -69,7 +69,7 @@ const Preview = () => {
                                 <textarea name="feedback" className="border w-full py-2 px-3 rounded-md text- focus:outline-none" placeholder="Feedback" id="" required></textarea>
                             </div>
                             <div>
-                                <input type="submit" value="Submit" className="w-full bg-[#FAB519] text-[#282649] rounded-md cursor-pointer py-2 text-base font-medium"  />
+                                <input type="submit" value="Submit" className="w-full bg-[#FAB519] text-white rounded-md cursor-pointer py-2 text-base font-medium"  />
                             </div>
 
                         </form>

@@ -78,7 +78,7 @@ const Nav = () => {
                   <Link onClick={()=>setProfile(!profile)} to="/attempte" className="text-center block">My Attempt</Link>
                 </div>
                 <div className="flex justify-center">
-                  <button className="py-1 px-3 text-sm rounded-md bg-[#FAB519] text-black font-medium" onClick={handleLogOut}>LogOut</button>
+                  <button className="py-1 px-3 text-sm rounded-md bg-[#FAB519] text-white font-semibold" onClick={handleLogOut}>Log Out</button>
                 </div>
               </div>
              </div> :<div className="flex justify-end">

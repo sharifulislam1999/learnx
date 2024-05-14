@@ -144,7 +144,7 @@ const CreateAssignment = () => {
                         </div>
                     </div>
                     <div>
-                        <input type="submit" value="Create" className="w-full bg-[#FAB519] text-[#282649] rounded-md cursor-pointer py-2 text-base font-medium" />
+                        <input type="submit" value="Create" className="w-full bg-[#FAB519] text-white font-semibold rounded-md cursor-pointer py-2 text-base font-medium" />
                     </div>
                 </form>
             </div>

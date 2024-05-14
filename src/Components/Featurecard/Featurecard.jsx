@@ -41,7 +41,7 @@ const Featurecard = ({item}) => {
                 <button onClick={()=>deleteItem(_id,addedby)} className='px-4 py-1 bg-red-600 text-white rounded-md font-medium'>Delete</button>
             </div> */}
             <div>
-            <Link to={`/details/${_id}`}><button className='px-4 w-full bg-[#FAB519] text-black font-semibold py-1 rounded-md hover:bg-transparent duration-200 border-2 border-[#FAB519]'>View</button></Link>
+            <Link to={`/details/${_id}`}><button className='px-4 w-full text-white bg-[#FAB519] hover:text-black font-semibold py-1 rounded-md hover:bg-transparent duration-200 border-2 border-[#FAB519]'>View</button></Link>
             </div>
         </div>
     );

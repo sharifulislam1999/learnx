@@ -38,7 +38,7 @@ const Banner = () => {
                         </div>             
                     </div>
                     <div className="mt-8" data-aos="fade-up" data-aos-duration="700" data-aos-delay="1100"   data-aos-easing="ease-in-out">
-                        <Link className="px-6 py-2 rounded-lg text-lg font-semibold border border-[#FAB519] duration-200 hover:bg-transparent hover:text-white  bg-[#FAB519]" to='/assignments'>All Assingment</Link>
+                        <Link className="px-6 py-2 rounded-lg text-lg font-semibold border border-[#FAB519] duration-200 hover:bg-transparent text-white hover:text-white  bg-[#FAB519]" to='/assignments'>All Assingment</Link>
                         </div> 
                 </div>
                 <div className="flex-1"></div>

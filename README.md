@@ -12,4 +12,5 @@ assignment_category_0001
 - **Rich Content**: Dive into a wealth of engaging content, from informative articles to captivating multimedia experiences.
 - **Curd**: Curd Oparation Feature.
 - **Authentication**: Authentication via Firebase has been added to this website.
+- **Discussion**: Everyone can comment after seeing the assignment.
 

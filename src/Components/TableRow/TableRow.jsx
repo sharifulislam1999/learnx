@@ -7,7 +7,7 @@ const TableRow = ({item}) => {
             <td>{title}</td>
             <td>{mark}</td>
             <td>{examineeName}</td>
-            <td><Link to={`/previewassignment/${_id}`} className="rounded-md py-1 px-2 font-normal bg-[#FAB519] text-black" >Give Mark</Link></td>
+            <td><Link to={`/previewassignment/${_id}`} className="rounded-md py-1 px-2 font-normal bg-[#FAB519] text-white" >Give Mark</Link></td>
       </tr>
     );
 };

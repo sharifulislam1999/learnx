@@ -1,9 +1,12 @@
 import axios from "axios";
 import useAuth from "../Hooks/useAuth";
 import { PropTypes } from 'prop-types';
-const Comment = ({id,comments,setComments}) => {    
+import { useState } from "react";
+const Comment = ({id,comments,setComments}) => { 
+    const [loader,setLoader] = useState(false)   
     const {user} = useAuth();
     const handleComment = (e)=>{
+        setLoader(true)
         e.preventDefault();
         const form = e.target;
         const comment = form.comment.value;
@@ -17,12 +20,14 @@ const Comment = ({id,comments,setComments}) => {
                 // const newComment = {assaignmentId:res.data.assaignmentId,comment:res.data.comment,commentBy:res.data.commentBy,photo:res.data.photo}
                 // console.log(newComment)
                 setComments([...comments,commentBody])
+                setLoader(false)
                 form.reset()
             }
         })
     }
     return (
         <div>
+            {loader && <span className=" my-4 loading loading-spinner text-warning"></span>}
         <div>
        <form onSubmit={handleComment} className="mt-10">
        <textarea name="comment" placeholder="Enter Your Comment" className="border w-full text-sm h-20 p-2 rounded-md focus:outline-none resize-y" id="" required/><br/>
@@ -30,6 +35,7 @@ const Comment = ({id,comments,setComments}) => {
        </form>
     </div>
             
+
         </div>
     );
 };

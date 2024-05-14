@@ -4,7 +4,7 @@ const Accordian = () => {
             <div className="join join-vertical w-full lg:w-[60%]">
   <div className="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" defaultChecked /> 
-    <div className="collapse-title text-xl font-medium">
+    <div className="collapse-title text-lg font-medium">
       <h1>How do I create and assign tasks to my friends on the website?</h1>
     </div>
     <div className="collapse-content"> 
@@ -13,7 +13,7 @@ const Accordian = () => {
   </div>
   <div className="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" /> 
-    <div className="collapse-title text-xl font-medium">
+    <div className="collapse-title text-lg font-medium">
     <h1>Can I track the progress of assigned tasks?</h1>
     </div>
     <div className="collapse-content"> 
@@ -22,7 +22,7 @@ const Accordian = () => {
   </div>
   <div className="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" /> 
-    <div className="collapse-title text-xl font-medium">
+    <div className="collapse-title text-lg font-medium">
       <h1>Is there a feature for collaborative document editing?</h1>
     </div>
     <div className="collapse-content"> 
@@ -31,7 +31,7 @@ const Accordian = () => {
   </div>
   <div className="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" /> 
-    <div className="collapse-title text-xl font-medium">
+    <div className="collapse-title text-lg font-medium">
       <h1>How can I schedule group study sessions or meetings?</h1>
     </div>
     <div className="collapse-content"> 
@@ -40,7 +40,7 @@ const Accordian = () => {
   </div>
   <div className="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" /> 
-    <div className="collapse-title text-xl font-medium">
+    <div className="collapse-title text-lg font-medium">
       <h1>Are there discussion forums for academic support and brainstorming?</h1>
     </div>
     <div className="collapse-content"> 
@@ -50,7 +50,7 @@ const Accordian = () => {
   </div>
   <div className="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" /> 
-    <div className="collapse-title text-xl font-medium">
+    <div className="collapse-title text-lg font-medium">
       <h1>Can I customize privacy settings for my assignments and group activities?</h1>
     </div>
     <div className="collapse-content"> 
