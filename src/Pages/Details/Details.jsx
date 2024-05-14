@@ -14,11 +14,15 @@ const Details = () => {
     const {id} = useParams();
     console.log(user)
     const {_id,title,mark,level,date,photo,des,addedby} = useLoaderData();
+    const [loader,setLoader] = useState(true);
     document.title = title;
     const [comments,setComments] = useState([]);
     useEffect(()=>{
-        axios.get(`https://learnx-omega.vercel.app/comment/${id}`)
-        .then(res => setComments(res.data))
+        axios.get(`https://learnx-omega.vercel.app/comment/${id}`,{withCredentials:true})
+        .then(res => {
+            setComments(res.data);
+            setLoader(false)
+        })
     },[])
     console.log(comments)
     const handleSubmit = (event)=>{
@@ -126,12 +130,13 @@ const Details = () => {
     <div className="my-10">
         <h1 className="text-3xl font-semibold text-[#FAB519] border-l-4 border-[#FAB519] pl-4">Discussion</h1>
     </div>
+    {loader && <span className="loading loading-spinner text-warning"></span> }
     <div className="flex flex-col gap-6">
         {comments.map((item,i)=><CommentCard key={i} item={item}></CommentCard>)}
     </div>
     <Comment id={id} comments={comments} setComments={setComments} ></Comment>
 </div>
-
+<ToastContainer position="top-center"></ToastContainer>
         </div>
     );
 };
