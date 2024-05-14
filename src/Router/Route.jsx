@@ -42,7 +42,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                loader: ({params})=>fetch(`https://learnx-omega.vercel.app/assignment/${params.id}`),
+                loader: ({params})=>fetch(`https://learnx-omega.vercel.app/assignment/${params.id}`,{credentials:"include"}),
                 element:<PrivateRoute><Details></Details></PrivateRoute>
             },
             {
@@ -57,7 +57,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/update/:id',
-                loader: ({params})=>fetch(`https://learnx-omega.vercel.app/assignment/${params.id}`),
+                loader: ({params})=>fetch(`https://learnx-omega.vercel.app/assignment/${params.id}`,{ credentials : "include" }),
                 element: <PrivateRoute><Update></Update></PrivateRoute>
             },
             {

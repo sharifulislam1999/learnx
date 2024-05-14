@@ -88,7 +88,7 @@ const Details = () => {
                             <h1>{des}</h1>
                         </div>
                         <div>
-                            <button onClick={taken} className="px-4 py-1 hover:bg-transparent hover:text-black duration-150 bg-[#FAB519] border-2 border-[#FAB519] text-black rounded-lg text-base font-medium">Take Assignment</button>
+                            <button onClick={taken} className="px-4 py-1 hover:bg-transparent hover:text-black duration-150 bg-[#FAB519] border-2 border-[#FAB519] text-white rounded-lg text-base font-medium">Take Assignment</button>
                         </div>
                     
                 </div>
@@ -108,7 +108,7 @@ const Details = () => {
             <textarea name="note" placeholder="Enter Your Notes" className="border w-full py-2 px-3 rounded-md focus:outline-none h-20" required></textarea>
         </div>
         <div>
-            <input type="submit" value="Submit" className="w-full border border-blue-600 hover:bg-transparent hover:text-black duration-150 font-semibold py-2 text-white cursor-pointer rounded-lg bg-blue-600" />
+            <input type="submit" value="Submit" className="w-full border-2  hover:bg-transparent hover:text-black duration-150 font-semibold py-2 text-white bg-[#FAB519] border-[#FAB519] cursor-pointer rounded-lg" />
         </div>
     </div>
     </form>
