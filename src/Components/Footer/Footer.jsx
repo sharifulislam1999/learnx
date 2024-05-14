@@ -2,6 +2,12 @@ import { Link } from 'react-router-dom';
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { FaUniversity } from "react-icons/fa";
+import { IoMailOutline } from "react-icons/io5";
+import { IoCall } from "react-icons/io5";
+
+import { IoLocationSharp } from "react-icons/io5";
+
 
 
 
@@ -34,13 +40,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-span-1 text-left lg:text-center space-y-8">
-              <div className="text-[#FAB519] text-xl font-normal">
-                <h1>Popular</h1>
+            <div className="text-[#FAB519] text-xl font-normal">
+                <h1>Key Links</h1>
               </div>
               <div className="text-[#c6c6c6]">
                 <ul className="space-y-2">
-                  <li>Upcomming Event</li>
-                  <li>Upcomming Assignment</li>
+                  <li>Event</li>
+                  <li>Assignment Rules</li>
                   <li>New Assignment</li>
                   <li>All Assignment</li>                 
                 </ul>
@@ -48,9 +54,9 @@ const Footer = () => {
             </div>
             <div className="col-span-1  text-left lg:text-center space-y-8">
               <div className="text-[#FAB519] text-xl font-normal">
-                <h1>Quick links</h1>
+                <h1>Trems & Condition</h1>
               </div>
-              <div className="text-[#c6c6c6] font-normal">
+              <div className="text-[#c6c6c6] font-normal mt-8">
                 <ul className="space-y-2">
                   <li>Terms of Use</li>
                   <li>Privacy Police</li>
@@ -59,32 +65,22 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-span-1  text-left lg:text-center space-y-4">
-              <div>
-                <h1 className="text-2xl text-[#FAB519] font-medium">News Letter</h1>
+            <div className="col-span-1  text-left lg:text-center space-y-8">
+            <div className="text-[#FAB519] text-xl font-normal">
+                <h1>Location</h1>
               </div>
               <div className="text-[#c6c6c6] font-normal">
-                <p>Subscribe to our newsletter.</p>
-              </div>
-              <div className="text-[#c6c6c6]">
-                <div className="flex items-center bg-white rounded-full">
-                  <div className="flex-grow">
-                    <input
-                      className="w-full text-base px-6  rounded-full border-none outline-none"
-                      type="email"
-                      placeholder="Enter Your Email"
-                    />
-                  </div>
-                  <div className="p-2">
-                    <h1 className="py-2 cursor-pointer bg-[#222222] text-white font-semibold px-4 rounded-full">
-                      Submit
-                    </h1>
-                  </div>
-                </div>
+                <ul className="space-y-2 flex justify-center flex-col text-center">
+                  <li className='flex justify-start lg:justify-center gap-2 items-center'><IoLocationSharp></IoLocationSharp>Dhaka,Bangladesh</li>
+                  <li className='flex justify-start lg:justify-center gap-2 items-center'><FaUniversity></FaUniversity>University of Bangladesh</li>
+                  <li className='flex justify-start lg:justify-center gap-2 items-center'><IoMailOutline></IoMailOutline>support@learnx.com</li>
+                  <li className='flex justify-start lg:justify-center gap-2 items-center'><IoCall></IoCall>+6565656</li>
+      
+                </ul>
               </div>
             </div>
           </div>
-          <div className="text-center mt-10 text-[#ABABAB]">
+          <div className="text-left mt-10 text-[#ABABAB]">
             <span>All Right Reserved By @learnx.com</span>
           </div>
         </div>

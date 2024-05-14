@@ -26,7 +26,7 @@ const Comment = ({id,comments,setComments}) => {
         <div>
        <form onSubmit={handleComment} className="mt-10">
        <textarea name="comment" placeholder="Enter Your Comment" className="border w-full text-sm h-20 p-2 rounded-md focus:outline-none resize-y" id="" required/><br/>
-       <input type="submit" className="py-2 mt-2 px-6 rounded-lg bg-[#FAB519] text-white" value="Comment" />
+       <input type="submit" className="py-2 cursor-pointer mt-2 px-6 rounded-lg bg-[#FAB519] text-white" value="Comment" />
        </form>
     </div>
             
