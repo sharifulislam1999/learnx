@@ -14,3 +14,7 @@ Server Repo:  [here](https://github.com/sharifulislam1999/learnx-server).
 - **Authentication**: Authentication via Firebase has been added to this website.
 - **Discussion**: Everyone can comment after seeing the assignment.
 
+## Test Instruction (terminal)
+1.  npm i
+2.  environment variable [shariful.feb1999@gmail.com]
+3.  npm run dev
